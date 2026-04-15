@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, open-sans;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(275deg, #471764, #1C367B);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    background: #fff;
+    width: 40%;
+    border-radius: 5px;
+    padding: 2rem;
+    box-shadow: 0 8 8 rgba(0, 0, 0, 0.1);
+}
+
+#title-header h1 {
+    color: #11295D;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-top: 0.2rem;
+}
+
+#text-field {
+    background: transparent;
+    outline: none;
+    padding: 1rem;
+    width: 75%;
+    border: transparent;
+}
+
+#add-task {
+    display: flex;
+    background: #edeef0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+#add-task button {
+    padding: 1rem 2.5rem;
+    border-radius: 30px;
+    border: none;
+    background: #FF6B35;
+    color: #fff;
+    font-weight: 400;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+}
+
+#add-tasks {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.circle {
+    cursor: pointer;
+    font-size: 30px;
+    margin: 0px 8px 0 8px;
+    background-origin: padding-box;
+}
+
+.fa-circle {
+    color: rgb(237, 238, 240);
+}
+
+.fa-circle:hover {
+    color: rgba(17, 41, 93, 1.00);
+}
+
+.fa-circle-check {
+    cursor: pointer;
+    display: none;
+    color: rgb(255, 107, 53);
+
+}
+
+.fa-xmark {
+    cursor: pointer;
+    color: rgb(51, 51, 51);
+    font-size: 0.9rem;
+    border-radius: 50%;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.fa-xmark:hover {
+    background: #FF4747;
+    color: #fff;
+}
+
+.list li {
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+    padding: 12px 8px 12px 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    color: #333;
+    width: 100%;
+}
+
+.list li span {
+    flex: 1;
+    word-break: break-word;
+}
+
+#list-items {
+    width: 100%;
+}
