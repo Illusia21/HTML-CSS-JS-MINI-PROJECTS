@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, open-sans;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(125deg, #3F9564, #9BCDB0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+#container {
+    background: #fff;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 1rem;
+    padding: 0 2rem 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 100px);
+    overflow: hidden;
+}
+
+#project-title {
+    text-align: center;
+    margin: 1.5rem;
+    color: #1a202c;
+}
+
+#balance-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #172125;
+    gap: 10px;
+}
+
+#balance-info h2 {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+#balance-container {
+    background-image: linear-gradient(to right, #A2D0AE, #749A42);
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.2rem;
+}
+
+#summary {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+}
+
+#income-box,
+#expense-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    padding: 16px;
+    gap: 5px;
+}
+
+#income-box {
+    color: #1B8E71;
+}
+
+#income-box h3 {
+    font-weight: 550;
+    font-size: 12px;
+}
+
+#income-box p {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+#expense-box {
+    color: #B92F38;
+}
+
+#expense-box h3 {
+    font-weight: 550;
+    font-size: 12px;
+}
+
+#expense-box p {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+#main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    flex: 1;
+    /* TRY REMOVING THIS*/
+    overflow: hidden;
+}
+
+#transaction-lists {
+    overflow-y: auto;
+    flex: 1;
+    scrollbar-width: thin;
+}
+
+#transactions-display {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 300px;
+}
+
+#transactions-display h2 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.transaction-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.transaction-card p {
+    font-size: 14px;
+}
+
+.income {
+    border-right: #10916D 5px solid;
+}
+
+.expenses {
+    border-right: #D32729 5px solid;
+}
+
+.transaction-card:hover {
+    transform: translateY(1.5px);
+}
+
+.transaction-card div {
+    display: flex;
+    gap: 10px;
+}
+
+.transaction-card .fa-xmark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    padding: 6px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+.fa-xmark:hover {
+    background: #FFE1E4;
+    color: #A14150;
+}
+
+#transaction-lists {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+#transaction-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #F2F6F9;
+    border-radius: 12px;
+    gap: 1rem;
+}
+
+#transaction-container h2 {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+#transaction-container h3 {
+    color: #5E6262;
+    font-weight: 450;
+    font-size: 14px;
+    padding-bottom: 4px;
+}
+
+#transaction-container p {
+    font-weight: 450;
+    font-size: 10px;
+    color: #8D8F95;
+    margin-top: 2px;
+}
+
+#transaction-container input {
+    border-radius: 6px;
+    border: 1px solid #ECEFF0;
+    height: 2.5rem;
+    outline: transparent;
+    padding: 0 10px 0 10px;
+    width: 100%;
+}
+
+#transaction-container button {
+    border: none;
+    height: 2.5rem;
+    background-image: linear-gradient(to right, #2F8F59, #37B26C);
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#transaction-container button:hover {
+    background-image: linear-gradient(to left, #2F8F59, #37B26C);
+}
+
+#transaction-container button:active {
+    transform: scale(0.99);
+}
+
+@media (max-width: 744px) {
+    #main-container {
+        grid-template-columns: 1fr;
+        overflow: auto;
+        scrollbar-width: thin;
+    }
+}
+
+@media (max-width: 590px) {
+    #summary {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
